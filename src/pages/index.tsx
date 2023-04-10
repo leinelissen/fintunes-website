@@ -151,8 +151,8 @@ export default function Landing() {
                         <p>Fintunes is developed out in the open. We’re always on the lookout for feedback, issues, ideas and suggestions! Have something you’d like to share with the Fintunes community at large? Hit us up on either GitHub or Discord.</p>
                         <Columns style={{ alignItems: "center" }}>
                             <GradientIcon src="github.svg" />
-                            <img
-                                src="./app-icon.png"
+                            <Image
+                                src="/app-icon.png"
                                 height={128}
                                 width={128} 
                                 alt="Jellyfin logo"

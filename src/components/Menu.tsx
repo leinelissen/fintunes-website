@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAppStoreIos, faGithub, faGooglePlay } from '@fortawesome/free-brands-svg-icons';
 import FDroidLogo from './FDroidLogo';
 import { APP_STORE_LINK, F_DROID_LINK, GITHUB_LINK, GOOGLE_PLAY_LINK } from '@/utility/links';
+import Image from 'next/image';
 
 const FixedBar = styled.div`
     position: sticky;
@@ -54,7 +55,7 @@ export default function Menu() {
         <FixedBar>
             <DividedColumns>
                 <Logo>
-                    <img src="./app-icon.png" height="32" width="32" />
+                    <Image src="/app-icon.png" height="32" width="32" alt="Fintunes logo" />
                     <span>Fintunes</span>
                 </Logo>
                 <Icons>
