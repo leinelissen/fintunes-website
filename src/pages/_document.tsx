@@ -6,6 +6,7 @@ export default function Document() {
         <Html lang="en">
             <Head>
                 <title>Fintunes — Audio streaming app for Jellyfin</title>
+                <meta name="description" content="Fintunes is a streaming audio player for the Jellyfin media system. It features a gorgeous interface that allows you to play your favourite music with ease." />
             </Head>
             <body>
                 <Main />
