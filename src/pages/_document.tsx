@@ -7,6 +7,8 @@ export default function Document() {
             <Head>
                 <title>Fintunes — Audio streaming app for Jellyfin</title>
                 <meta name="description" content="Fintunes is a streaming audio player for the Jellyfin media system. It features a gorgeous interface that allows you to play your favourite music with ease." />
+                <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+                <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
             </Head>
             <body>
                 <Main />
