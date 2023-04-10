@@ -3,6 +3,7 @@ import Container from './Container';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAppStoreIos, faGithub, faGooglePlay } from '@fortawesome/free-brands-svg-icons';
 import FDroidLogo from './FDroidLogo';
+import { APP_STORE_LINK, F_DROID_LINK, GITHUB_LINK, GOOGLE_PLAY_LINK } from '@/utility/links';
 
 const FixedBar = styled.div`
     position: sticky;
@@ -57,16 +58,32 @@ export default function Menu() {
                     <span>Fintunes</span>
                 </Logo>
                 <Icons>
-                    <a href="https://apps.apple.com/nl/app/fintunes/id1527732194?l=en" target="_blank">
+                    <a
+                        href={APP_STORE_LINK}
+                        target="_blank"
+                        aria-label="Open Fintunes on App Store"
+                    >
                         <FontAwesomeIcon icon={faAppStoreIos} />
                     </a>
-                    <a href="#" target="_blank">
+                    <a
+                        href={GOOGLE_PLAY_LINK}
+                        target="_blank"
+                        aria-label="Open Fintunes on Google Play"
+                    >
                         <FontAwesomeIcon icon={faGooglePlay} />
                     </a>
-                    <a href="#" target="_blank">
+                    <a
+                        href={F_DROID_LINK}
+                        target="_blank"
+                        aria-label="Open Fintunes on F-Droid"
+                    >
                         <FDroidLogo />
                     </a>
-                    <a href="https://github.com/leinelissen/jellyfin-audio-player" target="_blank">
+                    <a
+                        href={GITHUB_LINK}
+                        target="_blank"
+                        aria-label="Open Fintunes on GitHub"
+                    >
                         <FontAwesomeIcon icon={faGithub} />
                     </a>
                 </Icons>
