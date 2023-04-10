@@ -75,8 +75,8 @@ export default function Landing() {
                                 </Button>
                             </Buttons>
                         </VerticalSpacing>
-                        <div>
-                            <img src="./hero.png" style={{ height: '45vh', marginLeft: "-5vw", zIndex: 0 }} />
+                        <div style={{ height: '45vh', marginLeft: '-5vw', zIndex: 0, position: 'relative', aspectRatio: '17 / 20'}}>
+                            <Image src="/hero.png" fill alt="Fintunes overview" style={{ objectFit: 'contain' }} />
                         </div>
                     </Columns>
                 </Section>
