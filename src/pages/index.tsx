@@ -12,7 +12,7 @@ import TextHighlight from '@/components/TextHighlight';
 import VerticalSpacing from '@/components/VerticalSpacing';
 import { APP_STORE_LINK, DISCORD_LINK, F_DROID_LINK, GITHUB_LINK, GOOGLE_PLAY_LINK, PRIVACY_POLICY_LINK } from '@/utility/links';
 import { faAppStoreIos, faDiscord, faGithub, faGoogle, faGooglePlay } from '@fortawesome/free-brands-svg-icons';
-import { faFile } from '@fortawesome/free-solid-svg-icons';
+import { faBox, faFile } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import styled from 'styled-components';
@@ -55,6 +55,13 @@ export default function Landing() {
                                     target="_blank"
                                 >
                                     Download on App Store
+                                </Button>
+                                <Button
+                                    icon={<FontAwesomeIcon icon={faBox} />}
+                                    href="https://github.com/leinelissen/jellyfin-audio-player/releases/latest"
+                                    target="_blank"
+                                >
+                                    Download Android APK
                                 </Button>
                                 {/* <Button
                                     icon={<FontAwesomeIcon icon={faGooglePlay} />}
