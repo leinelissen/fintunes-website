@@ -66,7 +66,7 @@ export default function Menu() {
                     >
                         <FontAwesomeIcon icon={faAppStoreIos} />
                     </a>
-                    <a
+                    {/* <a
                         href={GOOGLE_PLAY_LINK}
                         target="_blank"
                         aria-label="Open Fintunes on Google Play"
@@ -79,7 +79,7 @@ export default function Menu() {
                         aria-label="Open Fintunes on F-Droid"
                     >
                         <FDroidLogo />
-                    </a>
+                    </a> */}
                     <a
                         href={GITHUB_LINK}
                         target="_blank"

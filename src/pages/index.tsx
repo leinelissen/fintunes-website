@@ -22,7 +22,7 @@ const Columns = styled.div<{ reverse?: boolean }>`
     align-items: flex-start;
     gap: 24px;
 
-    @media (max-width: 450px) {
+    @media (max-width: 600px) {
         flex-direction: ${({ reverse }) => reverse ? 'column-reverse' : 'column'};
         align-items: center;
     }
@@ -30,6 +30,10 @@ const Columns = styled.div<{ reverse?: boolean }>`
 
 const Centered = styled.div`
     text-align: center;
+`;
+
+const HeroImageWithShadow = styled(Image)`
+    filter: drop-shadow(0px 27px 45px rgba(0, 0, 0, 0.11)) drop-shadow(0px 11.28px 18.7999px rgba(0, 0, 0, 0.079074)) drop-shadow(0px 6.0308px 10.0513px rgba(0, 0, 0, 0.0655718)) drop-shadow(0px 3.38082px 5.6347px rgba(0, 0, 0, 0.055)) drop-shadow(0px 1.79553px 2.99255px rgba(0, 0, 0, 0.0444282)) drop-shadow(0px 0.747159px 1.24527px rgba(0, 0, 0, 0.030926));
 `;
 
 export default function Landing() {
@@ -40,7 +44,7 @@ export default function Landing() {
                 <Section style={{ paddingTop: 64 }}>
                     <Columns reverse>
                         <VerticalSpacing gap={32} style={{ position: 'relative', zIndex: 2 }}>
-                            <h1>Unleash your Jellyfin audio library, <TextHighlight>anywhere.</TextHighlight></h1>
+                            <h1>Unleash your Jellyfin <br />audio library, <TextHighlight>anywhere.</TextHighlight></h1>
                             <p style={{ fontSize: 20 }}>
                                 Fintunes is a beautiful, minimalistic and open-source <b>streaming music player</b> for <b>iOS</b> and <b>Android</b>, powered by <b>your own Jellyfin server</b>.
                             </p>
@@ -52,7 +56,7 @@ export default function Landing() {
                                 >
                                     Download on App Store
                                 </Button>
-                                <Button
+                                {/* <Button
                                     icon={<FontAwesomeIcon icon={faGooglePlay} />}
                                     href={GOOGLE_PLAY_LINK}
                                     target="_blank"
@@ -65,7 +69,7 @@ export default function Landing() {
                                     target="_blank"
                                 >
                                     Download on F-Droid
-                                </Button>
+                                </Button> */}
                                 <Button
                                     icon={<FontAwesomeIcon icon={faGithub} />}
                                     href={GITHUB_LINK}
@@ -75,40 +79,40 @@ export default function Landing() {
                                 </Button>
                             </Buttons>
                         </VerticalSpacing>
-                        <div style={{ height: '45vh', marginLeft: '-5vw', zIndex: 0, position: 'relative', aspectRatio: '17 / 20'}}>
-                            <Image src="/hero.png" fill alt="Fintunes overview" style={{ objectFit: 'contain' }} />
-                        </div>
+                        <HeroImageWithShadow src="/hero.png" alt="Fintunes overview" height={600} width={344} style={{ marginTop: -64, marginLeft: -100 }} />
+                        {/* <div style={{ width: '50vw', maxWidth: 500, marginLeft: '-150px', marginTop: -64, zIndex: 0, position: 'relative', aspectRatio: '17 / 20'}}>
+                            <HeroImageWithShadow src="/hero.png" fill alt="Fintunes overview" style={{ objectFit: 'contain', objectPosition: 'center right' }} />
+                        </div> */}
                     </Columns>
                 </Section>
                 <Hr />
                 <Section>
-
                     <ReducedWidth>
                         <h2>Stream your own music, from your own Jellyfin server.</h2>
                         <p>With Fintunes, you can stream your full audio library in <b>full quality</b>. List or search through your favourite <b>tracks</b>, <b>albums</b> and <b>playlists</b>.</p>
                     </ReducedWidth>
-                    <Image src="/overview.png" width={960} height={570} alt="Various Fintunes screens" style={{ width: '100%', height: 'auto' }} />
+                    <Image src="/overview.png" width={1320} height={570} alt="Various Fintunes screens" style={{ width: 'calc(100% + 180px)', height: 'auto', marginLeft: -90 }} />
                 </Section>
                 <Hr>PACKED WITH AWESOME FEATURES</Hr>
                 <Section>
                     <Columns>
                         <Centered>
                             <VerticalSpacing>
-                                <GradientIcon src="./airplay.svg" />
+                                <GradientIcon src="./airplay.svg" alt="AirPlay icon" />
                                 <h3>AirPlay &amp; Chromecast</h3>
                                 <p>Stream to speakers and TVs wirelessly via either <b>AirPlay</b> or <b>Chromecast</b>.</p>
                             </VerticalSpacing>
                         </Centered>
                         <Centered>
                             <VerticalSpacing>
-                                <GradientIcon src="./download.svg" />
+                                <GradientIcon src="./download.svg" alt="Download icon" />
                                 <h3>Offline Playback</h3>
                                 <p><b>Download your favourite tracks</b> and play them back, even when you are offline.</p>
                             </VerticalSpacing>
                         </Centered>
                         <Centered>
                             <VerticalSpacing>
-                                <GradientIcon src="./dark-mode.svg" />
+                                <GradientIcon src="./dark-mode.svg" alt="Dark mode icon" />
                                 <h3>Dark Mode</h3>
                                 <p>Available in both a dark and a light mode, based on your operating system settings.</p>
                             </VerticalSpacing>
@@ -150,7 +154,7 @@ export default function Landing() {
                         <h2>Get involved in the Fintunes community!</h2>
                         <p>Fintunes is developed out in the open. We’re always on the lookout for feedback, issues, ideas and suggestions! Have something you’d like to share with the Fintunes community at large? Hit us up on either GitHub or Discord.</p>
                         <Columns style={{ alignItems: "center" }}>
-                            <GradientIcon src="github.svg" />
+                            <GradientIcon src="github.svg" alt="GitHub icon" />
                             <Image
                                 src="/app-icon.png"
                                 height={128}
@@ -158,7 +162,7 @@ export default function Landing() {
                                 alt="Jellyfin logo"
                                 style={{ borderRadius: 8, boxShadow: "0px 27px 80px rgba(0, 0, 0, 0.05), 0px 11.28px 33.4221px rgba(0, 0, 0, 0.0359427), 0px 6.0308px 17.869px rgba(0, 0, 0, 0.0298054), 0px 3.38082px 10.0172px rgba(0, 0, 0, 0.025), 0px 1.79553px 5.32008px rgba(0, 0, 0, 0.0201946), 0px 0.747159px 2.21381px rgba(0, 0, 0, 0.0140573)" }}
                             />
-                            <GradientIcon src="discord.svg" />
+                            <GradientIcon src="discord.svg" alt="Discord icon" />
                         </Columns>
                         <Buttons>
                             <Button
@@ -191,6 +195,7 @@ export default function Landing() {
                                 href={APP_STORE_LINK}
                                 target="_blank"
                                 icon={<FontAwesomeIcon icon={faAppStoreIos} fixedWidth />}
+                                small
                             >
                                 Download on the App Store
                             </Button>
@@ -198,6 +203,8 @@ export default function Landing() {
                                 href={GOOGLE_PLAY_LINK}
                                 target="_blank"
                                 icon={<FontAwesomeIcon icon={faGooglePlay} fixedWidth />}
+                                disabled
+                                small
                             >
                                 Download on Google Play
                             </Button>
@@ -205,6 +212,8 @@ export default function Landing() {
                                 href={F_DROID_LINK}
                                 target="_blank"
                                 icon={<FDroidLogo />}
+                                disabled
+                                small
                             >
                                 Download on F-Droid
                             </Button>
@@ -214,6 +223,7 @@ export default function Landing() {
                                 href={GITHUB_LINK}
                                 target="_blank"
                                 icon={<FontAwesomeIcon icon={faGithub} fixedWidth />}
+                                small
                             >
                                 Get the source code on GitHub
                             </Button>
@@ -221,6 +231,7 @@ export default function Landing() {
                                 href={DISCORD_LINK}
                                 target="_blank"
                                 icon={<FontAwesomeIcon icon={faDiscord} fixedWidth />}
+                                small
                             >
                                 Join the Discord server
                             </Button>
@@ -228,6 +239,7 @@ export default function Landing() {
                                 href={PRIVACY_POLICY_LINK}
                                 target="_blank"
                                 icon={<FontAwesomeIcon icon={faFile} fixedWidth />}
+                                small
                             >
                                 Privacy Policy
                             </Button>
