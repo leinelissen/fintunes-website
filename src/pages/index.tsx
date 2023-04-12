@@ -126,25 +126,25 @@ export default function Landing() {
                         <p>We try our best to answer the most common questions getting in. If your question isn’t listed here, we probably still have an answer to the question in question. Head over to Discord or our GitHub page in order to get the answers you need!</p>
                         <div>
                             <Answer question="What kind of codecs can Fintunes play back?">
-                                <p>All of them?</p>
+                                <p>Fintunes is dependent on the OS for playback support. We can playback MP3, AAC, M4A, M4B and FLAC on both OSes. Additionally, ALAC is supported on iOS. Any other format is transcoded on the fly to AAC using Jellyfin.</p>
                             </Answer>
                             <Answer question="Does Fintunes support scrobbling?">
-                                <p>All of them?</p>
+                                <p>Fintunes does not yet support scrobbling, but the feature has been requested and is actively being looked at. Track <a href="https://github.com/leinelissen/jellyfin-audio-player/issues/62" target="_blank">this issue</a> to stay up-to-date on developments.</p>
                             </Answer>
                             <Answer question="Can I select a bitrate or sample rate for streaming playback?">
-                                <p>All of them?</p>
+                                <p>Jellyfin currently does not transfer any bitrate information to ffmpeg, restricting us from selecting either a bitrate or sample rate. Any future work is being tracked in <a href="https://github.com/leinelissen/jellyfin-audio-player/issues/118" target="_blank">this issue</a>.</p>
                             </Answer>
                             <Answer question="Do you collect any personal information while using this app?">
-                                <p>All of them?</p>
+                                <p>We try to respect your right to privacy as much as we can. By default, Fintunes will not collect no data whatsoever on your usage. To make debugging the application a little bit easier, you will be asked when first setting up the app if you want to share analytics information with us. If you have enabled this option, whenever an error occurs or the app crashes, information about the error will be sent to our own server in the EU.</p>
                             </Answer>
                             <Answer question="Who makes Fintunes and why? Do you have a business model?">
-                                <p>All of them?</p>
+                                <p>Fintunes is built by one Dutch guy called Lei. And I built it because I can! Fintunes is our way of giving back to the amazing open-source community. The core app will remain open-source in the future, and if you don&apos;t like where the app is headed, you can always fork it!</p>
                             </Answer>
                             <Answer question="Can I request a feature?">
-                                <p>All of them?</p>
+                                <p>Of course you can! Currently, work and updates on the app are tracked on GitHub. If you want to request something, first check whether an issue for this featue already exists on the <a href="https://github.com/leinelissen/jellyfin-audio-player/issues" target="blank">issues page</a>. If it doesn&apos;t, feel free to <a href="https://github.com/leinelissen/jellyfin-audio-player/issues/new" target="_blank">create a new issue</a>.</p>
                             </Answer>
                             <Answer question="I have an issue while using the app, where do I go?">
-                                <p>All of them?</p>
+                                <p>Any help with making the app better and more stable is deeply appreciated. We track any issues on our <a href="https://github.com/leinelissen/jellyfin-audio-player/issues" target="blank">GitHub issues page</a>. If you want to report something, first check whether an issue for this featue already exists. If it doesn&apos;t, feel free to <a href="https://github.com/leinelissen/jellyfin-audio-player/issues/new" target="_blank">create a new issue</a>. All details you can offer (such as when it happened, phone OS, Jellyfin server version, screenshots), make it much easier for us to resolve your issue, so feel free to share!</p>
                             </Answer>
                         </div>
                     </VerticalSpacing>
