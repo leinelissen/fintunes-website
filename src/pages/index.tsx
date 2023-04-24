@@ -69,14 +69,14 @@ export default function Landing() {
                                     target="_blank"
                                 >
                                     Download on Google Play
-                                </Button>
+                                </Button> */}
                                 <Button
                                     icon={<FDroidLogo />}
                                     href={F_DROID_LINK}
                                     target="_blank"
                                 >
                                     Download on F-Droid
-                                </Button> */}
+                                </Button>
                                 <Button
                                     icon={<FontAwesomeIcon icon={faGithub} />}
                                     href={GITHUB_LINK}
@@ -219,7 +219,6 @@ export default function Landing() {
                                 href={F_DROID_LINK}
                                 target="_blank"
                                 icon={<FDroidLogo />}
-                                disabled
                                 small
                             >
                                 Download on F-Droid
