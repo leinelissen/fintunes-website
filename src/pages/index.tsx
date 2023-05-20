@@ -10,9 +10,9 @@ import ReducedWidth from '@/components/ReducedWidth';
 import Section from '@/components/Section';
 import TextHighlight from '@/components/TextHighlight';
 import VerticalSpacing from '@/components/VerticalSpacing';
-import { APP_STORE_LINK, DISCORD_LINK, F_DROID_LINK, GITHUB_LINK, GOOGLE_PLAY_LINK, PRIVACY_POLICY_LINK } from '@/utility/links';
+import { APP_STORE_LINK, DISCORD_LINK, F_DROID_LINK, GITHUB_LINK, GOOGLE_PLAY_LINK, PRIVACY_POLICY_LINK, WEBLATE_LINK } from '@/utility/links';
 import { faAppStoreIos, faDiscord, faGithub, faGoogle, faGooglePlay } from '@fortawesome/free-brands-svg-icons';
-import { faBox, faFile } from '@fortawesome/free-solid-svg-icons';
+import { faBox, faFile, faLanguage } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import styled from 'styled-components';
@@ -25,6 +25,17 @@ const Columns = styled.div<{ reverse?: boolean }>`
     @media (max-width: 600px) {
         flex-direction: ${({ reverse }) => reverse ? 'column-reverse' : 'column'};
         align-items: center;
+    }
+`;
+
+const EqualColumns = styled.div`
+    display: grid;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-flow: column;
+    gap: 24px;
+
+    @media (max-width: 600px) {
+        grid-auto-flow: row;
     }
 `;
 
@@ -153,6 +164,9 @@ export default function Landing() {
                             <Answer question="I have an issue while using the app, where do I go?">
                                 <p>Any help with making the app better and more stable is deeply appreciated. We track any issues on our <a href="https://github.com/leinelissen/jellyfin-audio-player/issues" target="blank">GitHub issues page</a>. If you want to report something, first check whether an issue for this featue already exists. If it doesn&apos;t, feel free to <a href="https://github.com/leinelissen/jellyfin-audio-player/issues/new" target="_blank">create a new issue</a>. All details you can offer (such as when it happened, phone OS, Jellyfin server version, screenshots), make it much easier for us to resolve your issue, so feel free to share!</p>
                             </Answer>
+                            <Answer question="Can I translate Fintunes?">
+                                <p>Yes of course! We welcome any contributions from the community. In order to make translation just that bit easier, we maintain a <a href={WEBLATE_LINK} target="blank">Weblate instance</a> that allows you to translate Fintunes through an interface. Just start a new translation and submit it, so that we can pick it up for the next release.</p>
+                            </Answer>
                         </div>
                     </VerticalSpacing>
                 </Section>
@@ -192,7 +206,7 @@ export default function Landing() {
             </Container>
             <Footer>
                 <Container>
-                    <Columns>
+                    <EqualColumns>
                         <div>
                             <p>&copy; Lei Nelissen 2023</p>
                             <p>Fintunes is created and maintained by Lei Nelissen, with a little help and love from <a href="https://bmd.studio" target="_blank">BMD Studio</a>.</p>
@@ -242,6 +256,14 @@ export default function Landing() {
                                 Join the Discord server
                             </Button>
                             <Button
+                                href={WEBLATE_LINK}
+                                target="_blank"
+                                icon={<FontAwesomeIcon icon={faLanguage} fixedWidth />}
+                                small
+                            >
+                                Translate on Weblate
+                            </Button>
+                            <Button
                                 href={PRIVACY_POLICY_LINK}
                                 target="_blank"
                                 icon={<FontAwesomeIcon icon={faFile} fixedWidth />}
@@ -250,7 +272,7 @@ export default function Landing() {
                                 Privacy Policy
                             </Button>
                         </div>
-                    </Columns>
+                    </EqualColumns>
                 </Container>
             </Footer>
         </div>

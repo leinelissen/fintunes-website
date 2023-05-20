@@ -10,12 +10,13 @@ export const Buttons = styled.div`
 export const ButtonContainer = styled.a<{ disabled?: boolean, small?: boolean }>`
     background-color: #fbfbfb;
     color: var(--primary);
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 8px;
     padding: 16px 20px;
     text-decoration: none;
     border-radius: 8px;
+    flex-shrink: 0;
 
     &:disabled {
         color: salmon !important;
