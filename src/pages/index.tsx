@@ -74,13 +74,13 @@ export default function Landing() {
                                 >
                                     Download Android APK
                                 </Button>
-                                {/* <Button
+                                <Button
                                     icon={<FontAwesomeIcon icon={faGooglePlay} />}
                                     href={GOOGLE_PLAY_LINK}
                                     target="_blank"
                                 >
                                     Download on Google Play
-                                </Button> */}
+                                </Button>
                                 <Button
                                     icon={<FDroidLogo />}
                                     href={F_DROID_LINK}
@@ -224,7 +224,6 @@ export default function Landing() {
                                 href={GOOGLE_PLAY_LINK}
                                 target="_blank"
                                 icon={<FontAwesomeIcon icon={faGooglePlay} fixedWidth />}
-                                disabled
                                 small
                             >
                                 Download on Google Play
