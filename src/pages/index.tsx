@@ -147,7 +147,7 @@ export default function Landing() {
                                 <p>Fintunes is dependent on the OS for playback support. We can playback MP3, AAC, M4A, M4B and FLAC on both OSes. Additionally, ALAC is supported on iOS. Any other format is transcoded on the fly to AAC using Jellyfin.</p>
                             </Answer>
                             <Answer question="Does Fintunes support scrobbling?">
-                                <p>Fintunes does not yet support scrobbling, but the feature has been requested and is actively being looked at. Track <a href="https://github.com/leinelissen/jellyfin-audio-player/issues/62" target="_blank">this issue</a> to stay up-to-date on developments.</p>
+                                <p>We do!</p>
                             </Answer>
                             <Answer question="Can I select a bitrate or sample rate for streaming playback?">
                                 <p>Jellyfin currently does not transfer any bitrate information to ffmpeg, restricting us from selecting either a bitrate or sample rate. Any future work is being tracked in <a href="https://github.com/leinelissen/jellyfin-audio-player/issues/118" target="_blank">this issue</a>.</p>
